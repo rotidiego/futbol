@@ -1,0 +1,37 @@
+{
+    "channels": 
+        [
+            {
+                "Name": "Caracol",
+                "Detail": "www.google.com",
+                "URL": "https://www.capofut.net/play/ligamx1.php",
+                "status": false
+            },
+            {
+                "Name": "www.google.com",
+                "Detail": "www.google.com",
+                "URL": "https://www.capofut.net/play/canal3.php",
+                "status": false
+            },
+            {
+                "Name": "",
+                "Detail": "",
+                "URL": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+                "status": false
+            },
+            {
+                "Name": "",
+                "Detail": "",
+                "URL": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+                "status": false
+            },
+            {
+                "Name": "",
+                "Detail": "",
+                "URL": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+                "status": false
+            }
+
+        ]
+    
+}
