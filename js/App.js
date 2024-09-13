@@ -20,13 +20,6 @@ async function Load(){
     }
 }
 
-// Cargar el navbar y footer usando fetch
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('/ComponentsHTML/NavBar.html')
-        .then(response => response.text())
-        .then(data1 => document.getElementById('navBar').innerHTML = data1);  
-
-}); 
 function paintFilters(items) {
     $('#filtersItems').html(GenerateMenuChannels(items));
     $('#dropdownFilters').html( GenerateMenuChannelsResponsive(items));
