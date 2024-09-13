@@ -1,0 +1,85 @@
+{
+    "Channels": [
+        {
+          "ID": 1,
+          "Name": "Canal 5",
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/0/07/Logotipo-Canal-5-M%C3%A9xico.png",
+          "Category": "TV",
+          "Status": true,
+          "Country": "Mexico",
+          "URL": "https://live.sdfgnksbounce.com/latam.php?id=2_#",
+          "URL2": "https://beisbol-en-vivo-online.blogspot.com/2022/03/canal5-1.html"
+        },
+        {
+          "ID": 2,
+          "Name": "Caracol HD",
+          "Icon": "https://www.tdtparatodos.tv/sites/default/files/styles/img_110x60/public/caracol_1.png?itok=ppnVOCXg",
+          "Category": "TV",
+          "Status": true,
+          "Country": "Colombia",
+          "URL": "https://cdn.chatytvgratis.net/caracol01x.php",
+          "URL2": null
+        },
+        {
+          "ID": 3,
+          "Name": "RCN",
+          "Icon": "https://www.tdtparatodos.tv/sites/default/files/logo_canal_rcn_color_cmyk-01_1.jpg",
+          "Category": "TV",
+          "Status": true,
+          "Country": "Colombia",
+          "URL": "https://cdn.chatytvgratis.net/rcn02x.php",
+          "URL2": null
+        },
+        {
+          "ID": 4,
+          "Name": "Espn Premium",
+          "Icon": "https://s3.us-east-1.amazonaws.com/forofms.na/monthly_2022_05/large_es.png.aa439426a82c10606ef062d67bd99b89.png",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Global",
+          "URL": "https://www.capofut.net/play/espnpremium.php",
+          "URL2": null
+        },
+        {
+          "ID": 5,
+          "Name": "Win Sport +",
+          "Icon": "https://www.winsportsmas.com/sites/default/files/inline-images/WinfutbolNaranja.png",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Colombia",
+          "URL": "https://streamtp.live/global1.php?stream=winplus",
+          "URL2": "https://www.capofut.net/play/winsportsplus.php"
+        },
+        {
+          "ID": 6,
+          "Name": "Espn",
+          "Icon": "https://static.wikia.nocookie.net/telepedia-es/images/9/99/ESPN_logo.png/revision/latest?cb=20210826204726&path-prefix=es",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Global",
+          "URL": "https://streamtp.live/global1.php?stream=espn1",
+          "URL2": null
+        },
+        {
+          "ID": 7,
+          "Name": "Espn 2",
+          "Icon": "https://static.wikia.nocookie.net/espn/images/7/79/ESPN2-Logo-D795.png/revision/latest/scale-to-width-down/300?cb=20130819193813",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Global",
+          "URL": "https://streamtp.live/global1.php?stream=espn2",
+          "URL2": null
+        },
+        {
+          "ID": 8,
+          "Name": "Espn 3",
+          "Icon": "https://w7.pngwing.com/pngs/20/364/png-transparent-espn3-watchespn-espn-com-streaming-media-espn-3-television-text-sport-thumbnail.png",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Global",
+          "URL": "https://streamtp.live/global1.php?stream=espn3",
+          "URL2": null
+        }
+      ]
+      
+}

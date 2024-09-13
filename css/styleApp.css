@@ -1,0 +1,25 @@
+body{
+}
+.Box-shadow{
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 8px 0px;
+}
+.Box-shadow:hover{
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 4px 12px 1px;
+    transition-duration: 0.5s;
+}
+.card-image{
+    padding: 5px;
+    border-radius: 10px 10px 0px 0px;
+    background: white;
+}
+.card{
+    height: 100%;
+}
+.dropdown.is-active .dropdown-menu {
+    display: block;
+  }
+  .dropdown-content  {
+    padding: 10px;
+  }
+
+  

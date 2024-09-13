@@ -1,12 +1,4 @@
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  /* Elimina el borde por defecto */
-}
+ifa
 
 a {
   display: inline-block;
@@ -35,6 +27,11 @@ body{
   background: whitesmoke;
   height: 100%;
 }
-.navbar{
-  
+.IframeDiv{
+  height: 450px;
+  width: auto;
+}
+iframe{
+  height: 100%;
+  width: 100%;
 }

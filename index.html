@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleApp.css">
     <script src="
     https://cdn.jsdelivr.net/npm/sweetalert2@11.14.0/dist/sweetalert2.all.min.js
     "></script>
@@ -15,55 +15,36 @@
     " rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/App.js" defer></script>
 </head>
 
 <body>
-    
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-                <img width="auto" height="200" fill="none"
-                    src="https://static.vecteezy.com/system/resources/previews/023/579/944/original/illustration-of-soccer-logo-it-s-for-success-concept-png.png">
-
-
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                    Inicio
-                </a>
-
-                <a class="navbar-item">
-                    Canales
-                </a>
-
-            </div>
-
-        </div>
-    </nav>
+    <div id="navBar"></div>
     <section class="section">
 
         <div class="container">
-            <h1 class="title">
-                Hello World
-            </h1>
-            
-            <div>
-                <iframe id="contentIframe" src="" frameborder="0"></iframe>
+            <div class="IframeDiv">
+                <iframe id="contentIframe" src="about:blank" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="columns">
+            <div id="filters" class="column is-one-quarter">
+
+                <div class="is-hidden-touch" id="filtersItems"></div>
+
+                <div class="dropdown is-hidden-desktop" id="dropdownFilters"></div>
+            </div>
+            <div id="listItems" class="column">
+
             </div>
         </div>
     </section>
-    <script src="js/js.js"></script>
+
+    <script src="js/Constantes.js"></script>
+    <script src="js/GenerateComponentes.js"></script>
+    <script src="js/htmlVar.js"></script>
+    <script src="js/Utils.js"></script>
+
 </body>
 
 </html>

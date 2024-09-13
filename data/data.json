@@ -2,21 +2,22 @@
     "channels": 
         [
             {
-                "Name": "Caracol",
+                "Name": "Win Sport +",
                 "Detail": "www.google.com",
-                "URL": "https://www.capofut.net/play/ligamx1.php",
-                "status": false
+                
+                "URL": "https://www.capofut.net/play/winsportsplus.php",
+                "status": true
             },
             {
-                "Name": "www.google.com",
+                "Name": "Espn Premium",
                 "Detail": "www.google.com",
-                "URL": "https://www.capofut.net/play/canal3.php",
-                "status": false
+                "URL": "https://www.capofut.net/play/espnpremium.php",
+                "status": true
             },
             {
-                "Name": "",
+                "Name": "Win Sport",
                 "Detail": "",
-                "URL": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+                "URL": "https://www.capofut.net/play/winsports.php",
                 "status": false
             },
             {

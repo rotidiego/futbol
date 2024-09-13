@@ -1,0 +1,1 @@
+let URLSite = window.location.protocol + "//" + window.location.host + "/";

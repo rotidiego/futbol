@@ -9,50 +9,72 @@ $(document).ready(function () {
 });
 async function generateRandomPage() {
     let datar = "";
-    let ChannelsOk = data.filter((channel)  => channel)
-    ChannelsOk.channels.forEach((channel) => {
-        console.log(channel)
-        datar = channel[Math.floor(Math.random() * channel.length)].URL;
-        paintIframe(datar)
-    })
 
-    console.log(response)
+    const result = data.channels.filter(item => item.status === true);
+    if (result.length < 1) {
+        return
+    }
+    console.log(result)
+    datar = result[Math.floor(Math.random() * result.length)].URL;
+    paintIframe(datar)
+
 }
 async function getChannels() {
 
     let response = await callData('data/data.json', null);
 
+
     if (response.status) {
         data = response.results;
-        TestChannels();
+        await TestChannels();
         generateRandomPage();
     }
 }
 
-function TestChannels() {
+async function TestChannels() {
     let responseData = {};
     data.channels.forEach(async (channel) => {
-        responseData = await callData(channel.URL, null);
-        channel.Status = responseData.status;
+        responseData = await CallTest(channel.URL, { mode: 'no-cors' }), false;
+        channel.status = responseData.status;
         console.log(data)
     })
 }
 
 
 function paintIframe(url) {
-    $('contentIframe').attr('src', url);
-}
+    alert("hola")
+    document.getElementById('contentIframe').src = url;
 
-async function callData(url, data) {
+}
+async function CallTest(url, headers){
+    let resultTest = false;
+    try {
+        await fetch(url, headers )
+            .then(response => {
+                if(response.ok){
+                    resultTest = true
+                }
+            })
+            .catch(error => console.log(error));
+        
+    } catch (error) {
+        resultTest = false;
+        console.error(error)
+    }
+    return resultTest;
+
+}
+async function callData(url) {
     let responseData = {
         status: false,
         results: {}
     }
-    await fetch(url)
+    await fetch(url )
         .then(response => response.json()).then(json => {
-            responseData.status = true
-            responseData.results = json
-            console.log(json)
+                responseData.status = true
+                    responseData.results = json
+
+                console.log(json)
         })
         .catch(error => console.log(error));
     return responseData;
@@ -78,31 +100,3 @@ const AlertAsync = async (title, text, icon, confirmButtonText = 'Aceptar') => {
     });
 };
 
-
-// Bloquea el uso de window.open
-window.open = function () {
-    console.log("Intento de abrir nueva ventana bloqueado.");
-    return null;
-};
-
-// Bloquea enlaces con target="_blank"
-document.addEventListener('click', function (event) {
-    const element = event.target.closest('a');
-    if (element && element.target === '_blank') {
-        event.preventDefault();
-        console.log("Enlace con target='_blank' bloqueado.");
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Eliminar divs con clases típicas de anuncios
-    const adDivs = document.querySelectorAll("div[class*='ad'], div[id*='ad']");
-    adDivs.forEach(function (div) {
-        div.remove();
-    });
-    // Eliminar scripts que cargan anuncios
-    const adScripts = document.querySelectorAll("script[src*='ad']");
-    adScripts.forEach(function (script) {
-        script.remove();
-    });
-});
