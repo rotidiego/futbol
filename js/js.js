@@ -79,12 +79,6 @@ const AlertAsync = async (title, text, icon, confirmButtonText = 'Aceptar') => {
 };
 
 
-
-
-
-
-
-
 // Bloquea el uso de window.open
 window.open = function () {
     console.log("Intento de abrir nueva ventana bloqueado.");
