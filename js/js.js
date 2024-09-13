@@ -38,6 +38,7 @@ function TestChannels() {
     })
 }
 
+
 function paintIframe(url) {
     $('contentIframe').attr('src', url);
 }
