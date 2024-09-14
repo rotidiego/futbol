@@ -32,7 +32,7 @@ function getQueryParam(param) {
 
 // Cargar el navbar y footer usando fetch
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/futbol/ComponentsHTML/NavBar.html')
+    fetch('/ComponentsHTML/NavBar.html')
         .then(response => response.text())
         .then(data1 => document.getElementById('navBar').innerHTML = data1);  
 

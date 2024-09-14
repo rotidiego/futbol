@@ -1,1 +1,1 @@
-let URLSite = window.location.protocol + "//" + window.location.host + "/";
+let URLSite = window.location.protocol + "//" + window.location.host + "/futbol/";

@@ -6,12 +6,6 @@ $(document).ready(function () {
     console.log("ready!");
     load();
 });
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('/futbol/ComponentsHTML/NavBar.html')
-        .then(response => response.text())
-        .then(data1 => document.getElementById('navBar').innerHTML = data1);  
-
-}); 
 
 async function load() {
     let response = await getChannels();
