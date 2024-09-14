@@ -46,3 +46,4 @@ let htmlDropDownTrigger = '<div class="dropdown-trigger">'
     + '</span>'
     + '  </button>'
     + '</div>';
+let htmlButtons  = `<btn class="button is-{Style} is-inverted" onclick="paintIframe('{URL}')">{Text}</btn>`

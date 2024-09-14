@@ -35,13 +35,16 @@ const updateThemeUI = () => {
         }
     });
 };
-
-function LoadEvents() {
-
+function LoadEventsMenu(){
     dropdown = document.querySelector('#dropdownFilters .dropdown-trigger');
     dropdown.addEventListener('click', function () {
         this.parentNode.classList.toggle('is-active');
     });
+
+}
+
+function LoadEvents() {
+
     
     dropdownTheme = document.getElementById("js-themes");
     btnTheme = document.getElementById("themePage");

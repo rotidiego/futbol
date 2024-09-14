@@ -5,7 +5,8 @@ async function callFetch(url) {
         results: {}
     }
     await fetch(url)
-        .then(response => response.json()).then(json => {
+        .then(response => response.json())
+        .then(json => {
             responseData.status = true
             responseData.results = json
 
@@ -34,6 +35,7 @@ function getQueryParam(param) {
 document.addEventListener("DOMContentLoaded", function () {
     fetch(URLSite+'/ComponentsHTML/NavBar.html')
         .then(response => response.text())
-        .then(data1 => document.getElementById('navBar').innerHTML = data1);  
+        .then(data1 => document.getElementById('navBar').innerHTML = data1)
+        .then(a => LoadEvents());  
 
 }); 

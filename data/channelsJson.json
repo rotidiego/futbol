@@ -1,36 +1,36 @@
 {
     "Channels": [
-        {
+      {
           "ID": 1,
           "Name": "Canal 5",
           "Icon": "https://upload.wikimedia.org/wikipedia/commons/0/07/Logotipo-Canal-5-M%C3%A9xico.png",
           "Category": "TV",
           "Status": true,
           "Country": "Mexico",
-          "URL": "https://live.sdfgnksbounce.com/latam.php?id=2_#",
-          "URL2": "https://beisbol-en-vivo-online.blogspot.com/2022/03/canal5-1.html"
-        },
-        {
+          "URL": "https://embed.sdfgnksbounce.com/embed2/canal5.html",
+          "URL2": null
+      },
+      {
           "ID": 2,
           "Name": "Caracol HD",
           "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Caracol_TV_HD_logo.svg/2048px-Caracol_TV_HD_logo.svg.png",
           "Category": "TV",
           "Status": true,
           "Country": "Colombia",
-          "URL": "https://cdn.chatytvgratis.net/caracol01x.php",
+          "URL": "https://tele-libre.org/en-vivo-online/caracoltv/embed2.php",
           "URL2": null
-        },
-        {
+      },
+      {
           "ID": 3,
           "Name": "RCN",
           "Icon": "https://www.tdtparatodos.tv/sites/default/files/logo_canal_rcn_color_cmyk-01_1.jpg",
           "Category": "TV",
           "Status": true,
           "Country": "Colombia",
-          "URL": "https://cdn.chatytvgratis.net/rcn02x.php",
-          "URL2": null
-        },
-        {
+          "URL": "https://tele-libre.org/en-vivo-online/rcn/embed.php",
+          "URL2": "https://embed.sdfgnksbounce.com/embed2/rcn.html"
+      },
+      {
           "ID": 4,
           "Name": "Espn Premium",
           "Icon": "https://s3.us-east-1.amazonaws.com/forofms.na/monthly_2022_05/large_es.png.aa439426a82c10606ef062d67bd99b89.png",
@@ -39,8 +39,8 @@
           "Country": "Global",
           "URL": "https://www.capofut.net/play/espnpremium.php",
           "URL2": null
-        },
-        {
+      },
+      {
           "ID": 5,
           "Name": "Win Sport +",
           "Icon": "https://www.winsportsmas.com/sites/default/files/inline-images/WinfutbolNaranja.png",
@@ -49,8 +49,8 @@
           "Country": "Colombia",
           "URL": "https://streamtp.live/global1.php?stream=winplus",
           "URL2": "https://www.capofut.net/play/winsportsplus.php"
-        },
-        {
+      },
+      {
           "ID": 6,
           "Name": "Espn",
           "Icon": "https://1000marcas.net/wp-content/uploads/2020/02/logo-ESPN.png",
@@ -59,8 +59,8 @@
           "Country": "Global",
           "URL": "https://streamtp.live/global1.php?stream=espn1",
           "URL2": null
-        },
-        {
+      },
+      {
           "ID": 7,
           "Name": "Espn 2",
           "Icon": "https://logowik.com/content/uploads/images/espn24510.jpg",
@@ -69,8 +69,8 @@
           "Country": "Global",
           "URL": "https://streamtp.live/global1.php?stream=espn2",
           "URL2": null
-        },
-        {
+      },
+      {
           "ID": 8,
           "Name": "Espn 3",
           "Icon": "https://startvmexico.com/wp-content/uploads/2023/01/C_503.png",
@@ -79,7 +79,88 @@
           "Country": "Global",
           "URL": "https://streamtp.live/global1.php?stream=espn3",
           "URL2": null
-        }
-      ]
+      },
+      {
+          "ID": 9,
+          "Name": "Fox Sport",
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Fox_Sports_Netherlands_Logo.png",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Argentina",
+          "URL": "https://streamtp.live/global1.php?stream=fox1ar",
+          "URL2": null
+      },
+      {
+          "ID": 10,
+          "Name": "Fox Sport 2",
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Fox_sports_2_logo.svg/2560px-Fox_sports_2_logo.svg.png",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Argentina",
+          "URL": "https://streamtp.live/global1.php?stream=fox2ar",
+          "URL2": null
+      },
+      {
+          "ID": 11,
+          "Name": "Fox Sport 3",
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Fox_sports_3_logo.svg/1200px-Fox_sports_3_logo.svg.png",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Argentina",
+          "URL": "https://streamtp.live/global1.php?stream=fox3ar",
+          "URL2": null
+      },
+      {
+          "ID": 12,
+          "Name": "Win Sport",
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Win_Sports_nuevo_logo.svg/1200px-Win_Sports_nuevo_logo.svg.png",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Colombia",
+          "URL": "https://streamtp.live/global1.php?stream=winsports",
+          "URL2": null
+      },
+      {
+          "ID": 13,
+          "Name": "Azteca Deportes",
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Aztecadeporteslogo.png",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Mexico",
+          "URL": "https://streamtp.live/global1.php?stream=azteca_deportes",
+          "URL2": null
+      },
+      {
+          "ID": 14,
+          "Name": "TUDN",
+          "Icon": "https://logowik.com/content/uploads/images/tudn-tv7860.logowik.com.webp",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Mexico",
+          "URL": "https://streamtp.live/global1.php?stream=tudn_usa",
+          "URL2": null
+      },
+      {
+          "ID": 15,
+          "Name": "Fox Sports MX",
+          "Icon": "https://noticias.imer.mx/wp-content/uploads/2022/04/o1pPkhwJ_400x400.jpg",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Mexico",
+          "URL": "https://streamtp.live/global1.php?stream=foxsportsmx",
+          "URL2": null
+      },
+      {
+          "ID": 16,
+          "Name": "Espn MX",
+          "Icon": "https://www.thesportsdb.com/images/media/channel/logo/fysmne1660760631.png",
+          "Category": "Sport",
+          "Status": true,
+          "Country": "Mexico",
+          "URL": "https://streamtp.live/global1.php?stream=espnmx",
+          "URL2": null
+      }
+  ]
+  
       
 }

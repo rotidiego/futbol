@@ -48,6 +48,12 @@ function GenerateMenuChannelsResponsive(List) {
 
     return HtmlResult;
 }
-function GenerateItemView(item) {
-
+function GenerateOptionsBtn(items) {
+    let HtmlResult = '';
+    let styleBtn = ''
+    items.forEach((item, index)=>{
+        styleBtn = ButtonsElements[Math.floor(Math.random() * ButtonsElements.length)]
+        HtmlResult += htmlButtons.replace('{Text}','option ' +(index+1)).replace('{URL}',item).replace('{Style}',styleBtn) + '<br>'
+    })
+    return HtmlResult
 }

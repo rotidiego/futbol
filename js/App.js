@@ -12,8 +12,10 @@ async function Load(){
         data = response.results;
         categoriesFilters = getObjectFilters();
         paintFilters(categoriesFilters);
-        paintChannels(data.Channels);
-        LoadEvents()
+        paintChannels(data.Channels.sort(function(a, b) {
+            return b.Name.localeCompare(a.Name);
+          }));
+        LoadEventsMenu()
     }
 }
 

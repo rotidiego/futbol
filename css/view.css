@@ -5,9 +5,18 @@ html, body {
 
 iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: -webkit-fill-available;
     height: 100%;
     border: none; /* Elimina el borde por defecto */
 }
+.OptionsChannel{
+    padding: 20px;
+    position: relative;
+    display: grid;
+    align-items: center;
+    align-content: center;
+}
+
+button:hover{
+    cursor:pointer;
+  }
