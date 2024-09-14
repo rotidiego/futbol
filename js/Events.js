@@ -94,3 +94,40 @@ const setTheme = (theme, save = true) => {
 
     updateThemeUI();
 };
+
+// Evitar que se abran nuevas ventanas
+window.open = function() {
+    console.log("Intento de abrir nueva ventana bloqueado.");
+    return null;
+};
+
+// Evitar redirecciones usando window.location
+Object.defineProperty(window, 'location', {
+    configurable: false,
+    enumerable: true,
+    get: function() {
+        return window.location;
+    },
+    set: function(url) {
+        console.log("Intento de redirección bloqueado a: " + url);
+    }
+});
+// Bloquear enlaces que abren en una nueva pestaña
+document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+    link.removeAttribute('target');
+  });
+// Lista de clases e IDs comunes de anuncios
+const adSelectors = [
+    '.ad', '.ads', '.advertisement', '#ads', '#ad-banner', 
+    '.banner', '.pop-up', '.popup', '#pop-up', '#popup'
+  ];
+  
+  // Función para eliminar los anuncios
+  function removeAds() {
+    adSelectors.forEach(selector => {
+      document.querySelectorAll(selector).forEach(ad => ad.remove());
+    });
+  }
+  
+  // Ejecutar la eliminación de anuncios cada 2 segundos para detectar anuncios dinámicos
+  setInterval(removeAds, 2000);
