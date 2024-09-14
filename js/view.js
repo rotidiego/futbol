@@ -24,11 +24,11 @@ async function load() {
 function paintIframe(url) {
     let iframe = document.getElementById('Iframe');
     iframe.src = url;
-    iframe.onload = function () {
-        if (iframe.contentWindow.location.href !== URLSite) {
-            console.log("Intento de cambiar URL bloqueado.");
-            return false
-        }
+    iframe.onload = function() {
+      iframe.contentWindow.open = function() {
+        console.log("Intento de abrir ventana desde iframe bloqueado.");
+        return null;
+      };
     };
 
     // Bloquear enlaces que abren en una nueva pestaña
