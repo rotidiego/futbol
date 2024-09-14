@@ -16,7 +16,7 @@ async function callFetch(url) {
 }
 async function getChannels() {
 
-    let response = await callFetch('data/channelsJson.json', null);
+    let response = await callFetch(URLSite+'data/channelsJson.json', null);
     if (response.status) {
         data = response.results;
     }
@@ -32,7 +32,7 @@ function getQueryParam(param) {
 
 // Cargar el navbar y footer usando fetch
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/ComponentsHTML/NavBar.html')
+    fetch(URLSite+'/ComponentsHTML/NavBar.html')
         .then(response => response.text())
         .then(data1 => document.getElementById('navBar').innerHTML = data1);  
 
