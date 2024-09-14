@@ -1,4 +1,4 @@
-let dropdown 
+
 let categoriesFilters = {};
 $(document).ready(function () {
     console.log("ready!");
@@ -13,10 +13,7 @@ async function Load(){
         categoriesFilters = getObjectFilters();
         paintFilters(categoriesFilters);
         paintChannels(data.Channels);
-        dropdown = document.querySelector('#dropdownFilters .dropdown-trigger');
-        dropdown.addEventListener('click', function () {
-            this.parentNode.classList.toggle('is-active');
-        });
+        LoadEvents()
     }
 }
 

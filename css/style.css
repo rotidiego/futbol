@@ -1,4 +1,4 @@
-ifa
+
 
 a {
   display: inline-block;
@@ -34,4 +34,9 @@ body{
 iframe{
   height: 100%;
   width: 100%;
+}
+.navbar{  
+  display: grid;
+  align-items: center;
+  height: 80px;
 }

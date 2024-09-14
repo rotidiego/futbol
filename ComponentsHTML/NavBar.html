@@ -1,34 +1,86 @@
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img width="auto" height="200" fill="none"
-                src="https://static.vecteezy.com/system/resources/previews/023/579/944/original/illustration-of-soccer-logo-it-s-for-success-concept-png.png">
+<link rel="stylesheet" href="https://bulma.io/assets/css/website.min.css?v=202409041554">
+<link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-6.5.2-web/css/all.min.css">
 
+<link rel="canonical" href="https://bulma.io/documentation/components/nav/">
+<header class="bd-header">
+    <a style="display: flex; align-content: center;height: 80px;" href="https://bulma.io/">
+        <img src="https://img.icons8.com/m_outlined/200/FFFFFF/facebook-new.png" alt="">
 
+    </a>
+
+    <nav id="js-nav" class="bd-nav">
+
+        <a class="bd-nav-item bd-theme-docs is-docs"  href="">
+            <span class="icon">
+                <i class="fas fa-tv"></i>
+            </span>
+            <span class="bd-nav-item-name">
+                <span class="is-hidden-fullhd">Tv</span>
+                <span class="is-hidden is-block-fullhd">Tv</span>
+
+            </span>
+        </a>
+        <a class="bd-nav-item bd-theme-expo is-expo" title="Official Bulma showcase" href="">
+            <span class="icon">
+                <i class="fa-solid fa-futbol"></i>
+            </span>
+            <span class="bd-nav-item-name">
+                Sports
+            </span>
         </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-            data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
+    </nav>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="/">
-                Inicio
-            </a>
+    <div class="bd-nav-themes" >
+        <button class="bd-cycle js-burger is-moon" id="themePage" data-target="js-themes">
+            <div class="bd-cycles">
+                <div class="bd-cycle-sun">
+                    <span class="icon">
+                        <i class="fas fa-lg fa-sun" aria-hidden="true"></i>
+                    </span>
+                </div>
 
-            <a class="navbar-item">
-                Canales
-            </a>
+                <div class="bd-cycle-moon">
+                    <span class="icon">
+                        <i class="fas fa-lg fa-moon" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+        </button>
 
+        <div id="js-themes" class="bd-nav-menu is-cycles js-menu js-themes ">
+            <button data-scheme="light" class="bd-nav-item is-sun" aria-label="Light mode">
+                <span class="icon">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                </span>
+                <span>Light</span>
+            </button>
+
+            <button data-scheme="dark" class="bd-nav-item is-moon is-active" aria-label="Dark mode">
+                <span class="icon">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </span>
+                <span>Dark</span>
+            </button>
+
+            <button data-scheme="system" class="bd-nav-item is-system" aria-label="System mode">
+                <span class="icon">
+                    <i class="fas fa-desktop" aria-hidden="true"></i>
+                </span>
+                <span>System</span>
+            </button>
         </div>
-
     </div>
-</nav>
+
+    <button id="menuNav" class="navbar-burger bd-nav-burger js-burger" data-target="js-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
