@@ -30,6 +30,10 @@ function paintIframe(url) {
         return null;
       };
     };
+    iframe.contentWindow.open = function() {
+      console.log("Intento de abrir ventana desde iframe bloqueado.");
+      return null;
+    };
 
     // Bloquear enlaces que abren en una nueva pestaña
     iframe.querySelectorAll('a[target="_blank"]').forEach(function (link) {
