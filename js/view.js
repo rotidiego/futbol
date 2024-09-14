@@ -14,15 +14,29 @@ async function load() {
         queryId = getQueryParam('IDChannel')
         data = response.results;
         CurrentChannel = data.Channels.find(item => item.ID.toString() === queryId)
-        URLOptions = await getOptionsChannel(CurrentChannel)  
-        if(URLOptions!= ''){
+        URLOptions = await getOptionsChannel(CurrentChannel)
+        if (URLOptions != '') {
             paintIframe(CurrentChannel.URL)
             paintOptions();
         }
     }
 }
-function paintIframe( url) {
-    document.getElementById('Iframe').src = url;
+function paintIframe(url) {
+    let iframe = document.getElementById('Iframe');
+    iframe.src = url;
+    iframe.onload = function () {
+        if (iframe.contentWindow.location.href !== URLSite) {
+            console.log("Intento de cambiar URL bloqueado.");
+            return false
+        }
+    };
+
+    // Bloquear enlaces que abren en una nueva pestaña
+    iframe.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+        link.removeAttribute('target');
+    });
+
+    
 }
 
 window.open = function () {
@@ -53,9 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function paintOptions(){
+function paintOptions() {
     $('#OptionsChannel').html(GenerateOptionsBtn(URLOptions));
-    
+
 }
 
 async function getOptionsChannel(channelOp) {
@@ -64,7 +78,7 @@ async function getOptionsChannel(channelOp) {
 
     if (data.length > 0) {
         for (let item of data) {
-            if (channelOp[item] != "" && channelOp[item ] != null) {
+            if (channelOp[item] != "" && channelOp[item] != null) {
                 let resultTesting = await CallTest(channelOp[item], { method: 'GET', mode: 'no-cors' });
                 if (resultTesting) {
                     OptionsChannel.push(channelOp[item]);
@@ -77,19 +91,19 @@ async function getOptionsChannel(channelOp) {
 }
 async function CallTest(url, headers) {
     let resultTest = true;
-   /* try {
-        await fetch(url, headers)
-            .then(response => {
-                if (response.ok) {
-                    resultTest = true
-                }
-            })
-            .catch(error => console.log(error));
-
-    } catch (error) {
-        resultTest = false;
-        console.error(error)
-    }9*/
+    /* try {
+         await fetch(url, headers)
+             .then(response => {
+                 if (response.ok) {
+                     resultTest = true
+                 }
+             })
+             .catch(error => console.log(error));
+ 
+     } catch (error) {
+         resultTest = false;
+         console.error(error)
+     }9*/
     return resultTest;
 
 }
