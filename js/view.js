@@ -22,10 +22,36 @@ async function load() {
     }
 }
 function paintIframe(url) {
+    var link = document.createElement('link');
+    link.rel = 'import';
+    link.href = url;
+    document.head.appendChild(link);
+
     let iframe = document.getElementById('Iframe');
     iframe.src = url;
+    iframe.onload = function () {
+
+        iframe.contentWindow.open = function () {
+            console.log("Intento de abrir una nueva pestaña bloqueado.");
+            return null;
+        };
+
+        try {
+
+            var links = iframe.contentDocument.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].target === '_blank') {
+                    links[i].target = '_self';
+                }
+            }
+
+        } catch (error) {
+            console.error(error)
+        }
+    };
+
     iframe.setAttribute("sandbox", "");
-        
+
 }
 
 window.open = function () {
@@ -59,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function paintOptions() {
     $('#OptionsChannel').html(GenerateOptionsBtn(URLOptions));
     $('#ChannelData').html(GenerateTitleView(CurrentChannel));
-    
+
 }
 
 async function getOptionsChannel(channelOp) {
