@@ -47,3 +47,12 @@ let htmlDropDownTrigger = '<div class="dropdown-trigger">'
     + '  </button>'
     + '</div>';
 let htmlButtons  = `<btn class="button is-{Style} is-inverted" onclick="paintIframe('{URL}')">{Text}</btn>`
+let htmlItemTitel = '<div class="bd-feature is-{Style}">'
++ '<div class="bd-feature-body">'
+    + '<span class="icon is-medium">'
+      + '<img src="{Image}"/>'
+      + '</span>'
+    + '<h2 class="bd-feature-title">{Name}</h2>'
+    + '<h3 class="bd-feature-subtitle">{Country}</h3>'
+  + '</div>'
+  + '</div>'

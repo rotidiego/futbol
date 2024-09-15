@@ -57,3 +57,12 @@ function GenerateOptionsBtn(items) {
     })
     return HtmlResult
 }
+
+function GenerateTitleView(item) {
+    let HtmlResult = '';
+    let styleCard = ''
+    styleCard = BorderElements[Math.floor(Math.random() * BorderElements.length)]
+    HtmlResult = htmlItemTitel.replace('{Image}', item.Icon).replace('{Name}', item.Name).replace('{Country}', item.Country).replace('{Style}', styleCard) + '<br>'
+
+    return HtmlResult
+}

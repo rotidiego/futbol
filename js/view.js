@@ -24,8 +24,8 @@ async function load() {
 function paintIframe(url) {
     let iframe = document.getElementById('Iframe');
     iframe.src = url;
-    iframe.setAttribute("sandbox", "allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-scripts allow-top-navigation allow-forms");
-        
+    iframe.setAttribute("sandbox", "");
+      
 }
 
 window.open = function () {
@@ -58,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function paintOptions() {
     $('#OptionsChannel').html(GenerateOptionsBtn(URLOptions));
-
+    $('#ChannelData').html(GenerateTitleView(CurrentChannel));
+    
 }
 
 async function getOptionsChannel(channelOp) {
