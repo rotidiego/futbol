@@ -24,19 +24,8 @@ async function load() {
 function paintIframe(url) {
     let iframe = document.getElementById('Iframe');
     iframe.src = url;
-    iframe.onload = function() {
-      iframe.contentWindow.open = function() {
-        console.log("Intento de abrir ventana desde iframe bloqueado.");
-        return null;
-      };
-    };
-
-    // Bloquear enlaces que abren en una nueva pestaña
-    iframe.querySelectorAll('a[target="_blank"]').forEach(function (link) {
-        link.removeAttribute('target');
-    });
-
-    
+    iframe.setAttribute("sandbox", "allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-scripts allow-top-navigation allow-forms");
+        
 }
 
 window.open = function () {

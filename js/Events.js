@@ -35,7 +35,7 @@ const updateThemeUI = () => {
         }
     });
 };
-function LoadEventsMenu(){
+function LoadEventsMenu() {
     dropdown = document.querySelector('#dropdownFilters .dropdown-trigger');
     dropdown.addEventListener('click', function () {
         this.parentNode.classList.toggle('is-active');
@@ -45,13 +45,13 @@ function LoadEventsMenu(){
 
 function LoadEvents() {
 
-    
+
     dropdownTheme = document.getElementById("js-themes");
     btnTheme = document.getElementById("themePage");
     btnTheme.addEventListener("click", function () {
         showElements(dropdownTheme);
     });
-    
+
     navItems = document.getElementById("js-nav");
     menuNav = document.getElementById("menuNav");
     menuNav.addEventListener("click", function () {
@@ -96,38 +96,52 @@ const setTheme = (theme, save = true) => {
 };
 
 // Evitar que se abran nuevas ventanas
-window.open = function() {
+window.open = function () {
     console.log("Intento de abrir nueva ventana bloqueado.");
     return null;
 };
 
-// Evitar redirecciones usando window.location
-Object.defineProperty(window, 'location', {
-    configurable: false,
-    enumerable: true,
-    get: function() {
-        return window.location;
-    },
-    set: function(url) {
-        console.log("Intento de redirección bloqueado a: " + url);
-    }
-});
 // Bloquear enlaces que abren en una nueva pestaña
-document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
     link.removeAttribute('target');
-  });
+});
 // Lista de clases e IDs comunes de anuncios
 const adSelectors = [
-    '.ad', '.ads', '.advertisement', '#ads', '#ad-banner', 
+    '.ad', '.ads', '.advertisement', '#ads', '#ad-banner',
     '.banner', '.pop-up', '.popup', '#pop-up', '#popup'
-  ];
-  
-  // Función para eliminar los anuncios
-  function removeAds() {
+];
+
+// Función para eliminar los anuncios
+function removeAds() {
     adSelectors.forEach(selector => {
-      document.querySelectorAll(selector).forEach(ad => ad.remove());
+        document.querySelectorAll(selector).forEach(ad => ad.remove());
     });
-  }
-  
-  // Ejecutar la eliminación de anuncios cada 2 segundos para detectar anuncios dinámicos
-  setInterval(removeAds, 2000);
+}
+
+// Ejecutar la eliminación de anuncios cada 2 segundos para detectar anuncios dinámicos
+setInterval(removeAds, 2000);
+
+const originalFetch = window.fetch;
+window.fetch = async function (...args) {
+    const url = args[0];
+
+    // Filtrar URLs que quieres bloquear (por ejemplo, URLs de anuncios)
+    if (url.includes("adserver.com")) {
+        console.log("Petición bloqueada:", url);
+        return new Response(JSON.stringify({ message: "Bloqueado por el script" }), { status: 403 });
+    }
+
+    // Si no es una URL bloqueada, continuar con la petición original
+    return originalFetch.apply(this, args);
+};
+const originalXHROpen = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open = function (method, url) {
+    // Bloquear peticiones específicas
+    if (url.includes("adserver.com")) {
+        console.log("Petición de anuncio bloqueada:", url);
+        return false; // Bloquear la petición
+    }
+
+    // Continuar con las peticiones normales
+    return originalXHROpen.apply(this, arguments);
+};
