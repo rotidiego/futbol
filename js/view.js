@@ -31,11 +31,6 @@ function paintIframe(url) {
     iframe.src = url;
     iframe.onload = function () {
 
-        iframe.contentWindow.open = function () {
-            console.log("Intento de abrir una nueva pestaña bloqueado.");
-            return null;
-        };
-
         try {
 
             var links = iframe.contentDocument.getElementsByTagName('a');
@@ -44,6 +39,11 @@ function paintIframe(url) {
                     links[i].target = '_self';
                 }
             }
+            iframe.contentWindow.open = function () {
+                console.log("Intento de abrir una nueva pestaña bloqueado.");
+                return null;
+            };
+
 
         } catch (error) {
             console.error(error)
