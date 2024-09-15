@@ -25,7 +25,7 @@ function paintIframe(url) {
     let iframe = document.getElementById('Iframe');
     iframe.src = url;
     iframe.setAttribute("sandbox", "");
-      
+        
 }
 
 window.open = function () {
