@@ -21,13 +21,17 @@ async function load() {
         }
     }
 }
+
 function paintIframe(url) {
+    let iframe = document.getElementById('Iframe');
+    if(iframe.hasAttribute('sandbox')){
+        iframe.removeAttribute('sandbox')
+    }
     var link = document.createElement('link');
     link.rel = 'import';
     link.href = url;
     document.head.appendChild(link);
 
-    let iframe = document.getElementById('Iframe');
     iframe.src = url;
     iframe.onload = function () {
 
